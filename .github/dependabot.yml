@@ -1,0 +1,41 @@
+---
+version: 2
+updates:
+  - package-ecosystem: gomod
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      k8s:
+        patterns:
+          - "*k8s*"
+      testcontainers:
+        patterns:
+          - github.com/testcontainers/*
+      common:
+        patterns:
+          - "*"
+      golang:
+        patterns:
+          - go*
+      aqua:
+        patterns:
+          - "*aquasecurity*"
+    cooldown:
+      default-days: 7
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    groups:
+      github-actions:
+        patterns:
+          - "*"
+    cooldown:
+      default-days: 7
+  - package-ecosystem: docker
+    directory: /build/trivy-operator
+    schedule:
+      interval: daily
+    cooldown:
+      default-days: 7

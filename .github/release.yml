@@ -1,0 +1,20 @@
+# .github/release.yml
+
+changelog:
+  categories:
+    - title: ✨ Notable Changes ✨
+      labels:
+        - feature
+    - title: 🐛 Notable Fixes 🐛
+      labels:
+        - bug
+    - title: 🏎️ Performance Improvements 🏎️
+      labels:
+        - perf
+    - title: 📝 Documentation && Miscellaneous 🔧
+      labels:
+        - documentation
+        - misc
+    - title: 👒 Dependencies 👒
+      labels:
+        - deps
